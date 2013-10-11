@@ -6,13 +6,14 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+	<body>
+		<%= render 'shared/nav' %>
+		
+			<!-- Flash Message -->
+  			<p class="notice"><%= notice %></p>
+  			<p class="alert"><%= alert %></p>
 
-<!-- Flash Message -->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+	<%= yield %>
 
-<%= yield %>
-
-</body>
+	</body>
 </html>
